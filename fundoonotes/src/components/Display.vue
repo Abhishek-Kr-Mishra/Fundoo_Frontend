@@ -27,12 +27,7 @@
                             </div>
                             <v-card-actions v-if="hover">
                                 <icon v-bind:notesData="notesData"></icon>
-                                <!-- <v-icon class="mr-4">mdi-bell-plus-outline</v-icon>
-                                <v-icon class="mr-4">mdi-account-plus-outline</v-icon>
-                                <v-icon class="mr-4">mdi-palette</v-icon>
-                                <v-icon class="mr-4">mdi-image-outline</v-icon>
-                                <v-icon class="mr-2" v-on:click="archiveNote(notesData)">mdi-package-down</v-icon>
-                                <v-icon class="mr-4" v-on:click="trashNote(notesData)">mdi-trash-can-outline</v-icon> -->
+                                
                             </v-card-actions>
                         </v-card>
                     </v-hover>
@@ -80,6 +75,7 @@ export default {
             updateNotesData: [],
             dialog: false,
             componentKey: 0,
+            openSubMenu: false
         }
     },
     props:['allNotesData'],

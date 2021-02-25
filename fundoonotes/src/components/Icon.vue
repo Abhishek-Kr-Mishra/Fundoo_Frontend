@@ -10,12 +10,11 @@
             <v-btn
               icon
               id="testButton"
-              v-on="on"
             >
                 <v-icon>mdi-dots-vertical</v-icon>
             </v-btn>
             <v-menu top offset-y activator="#testButton">
-                <v-list>
+                <v-list class="link-list">
                     <v-list-item link>
                         <v-list-item-title>Delete Note</v-list-item-title>
                     </v-list-item>
@@ -30,13 +29,22 @@ import NotesService from '../Services/notesService'
 export default {
     data(){
         return{
-            items: [
-                { title: 'Delete Note' }
-            ]
         }
     },
     props:['notesData'],
     methods:{
+        // subMenu: function(){
+        //     if(this.openSubMenu === false){
+        //         this.openSubMenu = true
+        //         // console.log(this.openSubMenu)
+        //         return this.openSubMenu
+        //     }
+        //     else{
+        //         this.openSubMenu = false
+        //         // console.log(this.openSubMenu)
+        //         return this.openSubMenu
+        //     }
+        // },
         archiveNote: function(notes){
             console.log("notes", notes)
             let data = {
@@ -60,5 +68,7 @@ export default {
 </script>
 
 <style scoped>
-
+/* .link-list:hover{
+    display: block;
+} */
 </style>

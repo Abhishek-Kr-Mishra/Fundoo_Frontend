@@ -3,14 +3,15 @@
     <v-navigation-drawer
       height="100%"
       width="180"
-      
+      hide-overlay
       expand-on-hover
+      permanent
       >
       <v-list
         nav
         dense
       >
-      <v-list-item link>
+      <v-list-item link to="/dashboard/notes">
         <v-list-item-icon>
           <v-icon>mdi-lightbulb</v-icon>
           </v-list-item-icon>
@@ -28,14 +29,13 @@
             </v-list-item-icon>
             <v-list-item-title>Edit Labels</v-list-item-title>
           </v-list-item>
-          <v-list-item link>
+          <v-list-item link to="/dashboard/archive">
             <v-list-item-icon>
               <v-icon>mdi-archive</v-icon>
             </v-list-item-icon>
             <v-list-item-title>Archive</v-list-item-title>
-            <router-link :to=dashboard/archive></router-link>
           </v-list-item>
-          <v-list-item link>
+          <v-list-item link to="/dashboard/trash">
             <v-list-item-icon>
               <v-icon>mdi-delete</v-icon>
             </v-list-item-icon>
@@ -59,5 +59,8 @@ export default {
 <style scoped>
 .drawer{
   height: 100vh;
+}
+.v-list-item--active{
+  background: #FEEFC3;
 }
 </style>
